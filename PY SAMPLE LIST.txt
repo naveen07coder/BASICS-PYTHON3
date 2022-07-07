@@ -1,0 +1,211 @@
+
+///
+
+Write a Python program to count the number of strings where the string length is 2 or more and the first and last character are same from a given list of strings. Go to the editor
+Sample List : ['abc', 'xyz', 'aba', '1221']
+
+l = ['abc', 'xyz', 'aba', '1221']
+
+for i in range(len(l)):
+
+    k = len(l[i])
+    h = list(l[i])
+    o="".join(h)
+    if(k>2 and (h[0] == h[-1])):
+
+        print(o)
+
+
+///
+
+///
+
+
+Write a Python program to get a list, sorted in increasing order by the last element in each tuple from a given list of non-empty tuples.
+Sample List : [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]
+
+///
+
+def lst(n):
+    return n[-1]
+
+def sort_li(tuples):
+  return sorted(tuples, key=lst)
+
+print(sort_li([(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]))
+
+///
+
+///
+Write a Python program to find the list of words that are longer than n from a given list of words.
+
+
+def fun(l):
+    p = []
+
+    o = str(l).split(" ")
+
+    for i in o:
+        if (len(i) > 4):
+            p.append(i)
+    return(p)
+l = "The quick brown fox jumps over the lazy dog"
+
+print(fun(l))
+
+///
+
+
+///
+
+ Write a Python program to convert a tuple to a string
+k = (1,2,4,45,"naveen", 21.2)
+p = (1,2,5, "jagan")
+
+p = []
+
+for i in range(len(k)):
+
+    p.append(str(k[i]))
+
+st = "".join(p)
+print(st)
+
+
+///
+
+
+///
+
+Write a Python program to get the 4th element and 4th element from last of a tuple.
+tuplex = ("w", 3, "r", "e", "s", "o", "u", "r", "c", "e")
+
+print(tuplex[3])
+
+print("+++++++++++=================+++++++++++++++")
+
+print(tuplex[-4])
+
+///
+
+
+
+///
+
+Write a Python program to remove an item from a tuple
+
+tuplex = ("w", 3, "r", "e", "s", "o", "u", "r", "c", "e")
+
+tuplex = tuplex[:2] + tuplex[3:]
+print(tuplex)
+
+tup = list(tuplex)
+print(tup)
+
+tup.remove("e")
+print(tup)
+
+tup.remove("r")
+print(tup)
+
+///
+
+///
+
+Write a Python program to check whether an element exists within a tuple.
+
+tuplex = ("w", 3, "r", "e", "s", "o", "u", "r", "c", "e")
+
+print(3 in tuplex)
+
+print("r" in tuplex)
+
+print(tuplex.count("e"))
+///
+
+///
+
+list to tuple
+tup= ["w", 3, "r", "e", "s", "o", "u", "r", "c", "e"]
+
+tuplex = tuple(tup)
+
+print(type(tuplex))
+
+///
+
+///
+remove from tuple 
+tup= ["w", 3, "r", "e", "s", "o", "u", "r", "c", "e"]
+
+tup.remove(3)
+print(tup)
+///
+
+
+/// CLASS AND OBJECT
+
+class student:
+    def __init__(self, name, branch):
+        self.name = name
+        self.branch = branch
+
+    def pro(self):
+        print("His name : ", self.name)
+        print("Studying in ", self.branch)
+
+a = input()
+b = input()
+s1 = student(a, b)
+s1.pro()
+
+
+///
+
+
+/// inheritance
+
+class student:
+    def __init__(self, name, branch):
+        self.name = name
+        self.branch = branch
+
+    def pro(self):
+        print("His name : ", self.name)
+        print("Studying in ", self.branch)
+
+class dup(student):
+    def __init__(self, name , branch):
+        super().__init__( name, branch)
+        self.name =name
+        self.branch = branch
+
+a = input()
+b = input()
+s1 = student(a, b)
+l2 = dup(a, b)
+print(l2.name)
+print(l2.branch)
+
+///
+
+///
+Class and object in Rectangle
+class Rectange:
+    def __init__(self, len, bth):
+        self.length = len
+        self.breath = bth
+
+    def area(self):
+        return (self.length)*(self.breath)
+
+    def peri(self):
+        return 2*(self.length+self.breath)
+
+a = int(input())
+b = int(input())
+R1 = Rectange(a, b)
+print(R1.area())
+print(R1.peri())
+
+///
